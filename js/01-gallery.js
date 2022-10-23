@@ -62,9 +62,24 @@ const onGalleryClick = function (event) {
     <img src='${imgSrcForLibrary}' width="1280">
     `)
 
-    instance.show()
+  instance.show()
+  
+  closeModalWindowByEscape(instance)
 };
 
 galleryListEl.addEventListener('click', onGalleryClick)
+
+// Escape
+function closeModalWindowByEscape(modalWindow) {
+  const onEscapeKey = (event) => {
+    // console.log(event.code)
+    if (event.code === 'Escape') {
+      modalWindow.close();
+      window.removeEventListener('keydown', onEscapeKey)
+    }
+    return;
+  };
+  window.addEventListener('keydown', onEscapeKey);
+}
 
 console.log(galleryItems);
