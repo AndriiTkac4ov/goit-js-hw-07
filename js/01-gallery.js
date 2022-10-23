@@ -19,9 +19,9 @@ const galleryListEl = document.querySelector('.gallery');
 //         .join('');
 // };
 
-// const galleryMarup = createGalleryMarkup(galleryItems);
+// const galleryMarkup = createGalleryMarkup(galleryItems);
 
-// galleryListEl.insertAdjacentHTML('beforeend', galleryMarup);
+// galleryListEl.insertAdjacentHTML('beforeend', galleryMarkup);
 
 // ================================================
 
